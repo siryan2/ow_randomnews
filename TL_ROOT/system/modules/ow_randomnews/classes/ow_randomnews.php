@@ -68,6 +68,7 @@ class ow_randomnews extends \Module
 
         $this->Template->title = ($objRandomNewsID->ow_randomnews_showtitle == 1) ? '{{news_open::'.$objNews->id.'}}'.$objNews->headline.'{{link_close}}' : '';
         $this->Template->teaser = ($objRandomNewsID->ow_randomnews_showteaser == 1) ? $objNews->teaser : '';
+        $this->Template->link = '{{news_url::'.$objNews->id.'}}';
 
     }
 
