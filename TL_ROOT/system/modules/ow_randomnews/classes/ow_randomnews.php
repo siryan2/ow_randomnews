@@ -48,7 +48,7 @@ class ow_randomnews extends \Module
         $newsarchiv = deserialize($objRandomNewsID->ow_randomnews);
         shuffle($newsarchiv);
 
-        $objNews = $this->Database->prepare("SELECT id, headline, teaser, addImage, singleSRC, size, caption FROM tl_news WHERE pid = ? AND published = 1")
+        $objNews = $this->Database->prepare("SELECT id, headline, subheadline, teaser, addImage, singleSRC, size, caption FROM tl_news WHERE pid = ? AND published = 1")
             ->execute($newsarchiv);
 
         if ($objNews->addImage == 1 && $objRandomNewsID->ow_randomnews_showimage == 1)
@@ -69,7 +69,7 @@ class ow_randomnews extends \Module
         $this->Template->title = ($objRandomNewsID->ow_randomnews_showtitle == 1) ? '{{news_open::'.$objNews->id.'}}'.$objNews->headline.'{{link_close}}' : '';
         $this->Template->teaser = ($objRandomNewsID->ow_randomnews_showteaser == 1) ? $objNews->teaser : '';
         $this->Template->link = '{{news_url::'.$objNews->id.'}}';
-
+        $this->Template->subheadline = $objNews->subheadline;
     }
 
 }
