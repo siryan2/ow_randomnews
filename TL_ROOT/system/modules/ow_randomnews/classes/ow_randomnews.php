@@ -53,8 +53,7 @@ class ow_randomnews extends \Module
 
         if ($objNews->addImage == 1 && $objRandomNewsID->ow_randomnews_showimage == 1)
         {
-            $objImage = $this->Database->prepare("SELECT path FROM tl_files WHERE id = ?")
-                ->execute($objNews->singleSRC);
+            $objImage = \FilesModel::findByUuid($objNews->singleSRC);
 
             if ($objNews->size != '')
             {
@@ -73,4 +72,3 @@ class ow_randomnews extends \Module
     }
 
 }
-
