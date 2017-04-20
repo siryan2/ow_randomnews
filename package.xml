@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE contaopackage>
+<extension name="ow_randomnews" date="20160720">
+    <author user="Oden" name="Heiko Unger" website="http://www.odenwerk.de" />
+    <copyright>&amp;copy; 2013 Heiko Unger, Odenwerk</copyright>
+    <license>LGPL</license>
+    <classification type="free" category="application" />
+    <release version="10000009" build="7" date="20130420" />
+    <contao minversion="30000009" maxversion="30000069" />
+    <language code="de">
+        <translator user="Oden" name="Heiko Unger" website="http://www.odenwerk.de" />
+        <searchtags>random,news,archiv,nachrichten</searchtags>
+        <title>ow_randomnews</title>
+        <teaser>Zeigt eine Zufallsnachricht an</teaser>
+        <description>FE-Modul zum ausgeben einer Zufallsnachricht. Es kann aus mehreren Nachrichten-Archiven ausgewählt werden. Zeigt auf Wunsch auch den Teasertext und/oder das Teaserbild mit an.</description>
+        <forum link="https://community.contao.org/de/forum.php" />
+    </language>
+    <language code="en">
+        <translator user="Oden" name="Heiko Unger" website="http://www.odenwerk.de" />
+        <searchtags>random,zufall,news,archiv,nachrichten</searchtags>
+        <title>ow_randomnews</title>
+        <teaser>Displays a random message</teaser>
+        <description>FE-Module to the output of a random message. It can be selected from several news archives. On request also shows the teaser text and / or the teaser image.</description>
+        <forum link="https://community.contao.org/de/forum.php" />
+    </language>
+</extension>
